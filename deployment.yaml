@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: node-api
-          image: <your-image>  # e.g., docker.io/username/node-api
+          image: docker.io/ypavankumar/node-scale  # e.g., docker.io/username/node-api
           ports:
             - containerPort: 3000
           resources:
