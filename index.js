@@ -4,9 +4,12 @@ const host = process.env.HOST || '0.0.0.0';
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  const msg = 'Hello Node! altered final\n';
-  setTimeout(() => {}, 100000);
-  res.end(msg);
+  function blockCpu(milliseconds) {
+    const start = Date.now();
+    while (Date.now() - start < milliseconds) {}
+  }
+    blockCpu(100);
+    res.end('Hello, CPU is loaded');
 });
 
 server.listen(port, '0.0.0.0', () => {
