@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Number of concurrent requests
-NUM_REQUESTS=10000
+NUM_REQUESTS=100000
 
 # Loop to send concurrent requests using curl in the background
 for i in $(seq 1 $NUM_REQUESTS); do

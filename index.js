@@ -5,7 +5,7 @@ const host = process.env.HOST || '0.0.0.0';
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   const msg = 'Hello Node! altered final\n';
-  setTimeout(() => {}, 10000);
+  setTimeout(() => {}, 100000);
   res.end(msg);
 });
 
